@@ -24,4 +24,4 @@
 #  add_lunch_combo cm_p7000-$var
 #done
 
-add_lunch_combo cm_p7000-userdebug
+add_lunch_combo cm_aio_otfp-userdebug
