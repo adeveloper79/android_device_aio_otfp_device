@@ -190,7 +190,6 @@ lib/libaudiodcrflt.so
 lib/libaudiomtkdcremoval.so
 lib/libaudiosetting.so
 lib/libbessound_hd_mtk.so
-lib/libbessurround_mtk.so
 lib/libblisrc.so
 lib/libblisrc32.so
 lib/libbluetooth_mtk.so
