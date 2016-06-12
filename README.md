@@ -3,10 +3,10 @@
 CM12.1 lenovo k3 note (MT6752)
 
 #WORK:
-Not Yet Tested
+boots
 
 #DON'T WORK:
-Not Yet Tested
+RIL
 
 TFA98xx IS NOT INITIALIZED
 
