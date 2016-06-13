@@ -1,15 +1,19 @@
-# mount point	fstype    device    	[device2]
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-/boot		emmc		/dev/block/platform/mtk-msdc.0/by-name/boot     flags=display="Boot";backup=1
-/logo			emmc	/dev/block/platform/mtk-msdc.0/by-name/logo		flags=display="Logo";backup=1;flashimg=1
-/nvram		emmc		/dev/block/platform/mtk-msdc.0/by-name/nvram       flags=display="Nvram";backup=1;flashimg=1
-/recovery	emmc		/dev/block/platform/mtk-msdc.0/by-name/recovery    flags=display="Recovery";backup=1
-/lk				emmc	/dev/block/platform/mtk-msdc.0/by-name/lk		flags=display="Uboot";backup=1;flashimg=1
-/proinfo		emmc	/dev/block/platform/mtk-msdc.0/by-name/proinfo	flags=display="Proinfo";backup=1;flashimg=1
-/protect_f		ext4	/dev/block/platform/mtk-msdc.0/by-name/protect1	flags=display="Protect";backup=1
-/protect_s		ext4	/dev/block/platform/mtk-msdc.0/by-name/protect2	flags=subpartitionof=/protect_f;backup=1
-/system		ext4		/dev/block/platform/mtk-msdc.0/by-name/system     flags=display="System";backup=1;wipeingui
-/cache		ext4		/dev/block/platform/mtk-msdc.0/by-name/cache     flags=display="Cache";backup=1;wipeingui;wipeduringfactoryreset
-/data		ext4		/dev/block/platform/mtk-msdc.0/by-name/userdata     backup=1;wipeingui;wipeduringfactoryreset
-/external_sd		auto		/dev/block/mmcblk1p1	/dev/block/mmcblk1    flags=display="External SD-card";storage;wipeingui;removable;backup=0
-/usbotg			auto    /dev/block/sda1	 /dev/block/sda			flags=display="USB-OTG";storage;wipeingui;removable;backup=0
+#<src>          <mnt_point>        <type>       <mnt_flags and options>       <fs_mgr_flags>
+
+/dev/block/platform/mtk-msdc.0/by-name/boot      /boot             emmc         defaults                     defaults
+/dev/block/platform/mtk-msdc.0/by-name/nvram        /nvram            emmc         defaults                     defaults
+/dev/block/platform/mtk-msdc.0/by-name/recovery     /recovery         emmc         defaults                     defaults
+
+/dev/block/platform/mtk-msdc.0/by-name/system       /system       ext4      ro,noatime          wait
+/dev/block/platform/mtk-msdc.0/by-name/cache       /cache        ext4      noatime,nosuid,nodev,noauto_da_alloc     wait
+/dev/block/platform/mtk-msdc.0/by-name/userdata    /data               ext4      noatime,nosuid,nodev,noauto_da_alloc    wait,check,encryptable=footer
+/dev/block/platform/mtk-msdc.0/by-name/protect1   /protect_f          ext4      noatime,nosuid,nodev,noauto_da_alloc    wait,check
+/dev/block/platform/mtk-msdc.0/by-name/protect2   /protect_s          ext4      noatime,nosuid,nodev,noauto_da_alloc    wait,check
+
+# vold-managed volumes
+/devices/platform/mtk-msdc.0/mmc_host/mmc0      auto     auto    defaults voldmanaged=sdcard0:16
+/devices/platform/mtk-msdc.1/mmc_host/mmc1      auto     auto    defaults voldmanaged=sdcard1:auto
