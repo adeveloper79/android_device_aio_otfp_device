@@ -18,5 +18,6 @@ TFA98xx IS NOT INITIALIZED
 -Nofearnohappy
 -Vgdn1942
 
-
-AND A HEALTHY FUCK OFF TO JIAYU S3 DEVS  _|_
+#SPECIAL THANKS
+FUCK OFF TO JIAYU S3 DEVS
+specially superdragonpt (may ur asshole get wide enough)
