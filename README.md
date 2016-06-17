@@ -17,6 +17,9 @@ TFA98xx IS NOT INITIALIZED
 -Xen0n
 -Nofearnohappy
 -Vgdn1942
+-Karthick Bhai
+-Fizi
+-Trishi
 
 #SPECIAL THANKS
 FUCK OFF TO JIAYU S3 DEVS
