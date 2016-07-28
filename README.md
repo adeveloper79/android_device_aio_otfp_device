@@ -21,6 +21,3 @@ TFA98xx IS NOT INITIALIZED
 -Fizi
 -Trishi
 
-#SPECIAL THANKS
-FUCK OFF TO JIAYU S3 DEVS
-specially superdragonpt (may ur asshole get wide enough)
