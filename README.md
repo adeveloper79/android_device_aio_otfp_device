@@ -6,7 +6,7 @@ CM12.1 lenovo k3 note (MT6752)
 boots
 
 #DON'T WORK:
-RIL
+RIL (for ril add commits in the source of opt/telephone)
 
 TFA98xx IS NOT INITIALIZED
 
