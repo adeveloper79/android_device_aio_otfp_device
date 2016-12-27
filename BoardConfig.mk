@@ -199,6 +199,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 # SELinux
 BOARD_SEPOLICY_DIRS := \
        device/Lenovo/aio_otfp/sepolicy
+       
+# RIL
+BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
 
 #SELinux: MTK added
 BOARD_SEPOLICY_UNION := \
