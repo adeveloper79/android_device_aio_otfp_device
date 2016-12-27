@@ -14,7 +14,7 @@ EXTENDED_FONT_FOOTPRINT := true
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.timezone=Asia/Kolkata
 
-PRODUCT_DEVICE := K3 Note
+PRODUCT_DEVICE := aio_otfp
 PRODUCT_NAME := full_aio_otfp
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo K3 Note
